@@ -53,8 +53,6 @@ Details of data assumptions and variable definitions are provided in:
 ## Explainability Method Used
 - **Intrinsic Random Forest Feature Importance**
 
-No post-hoc explainability techniques (e.g., SHAP or LIME) are used in this project.
-
 ---
 
 ## Ethical Considerations
