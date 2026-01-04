@@ -1,55 +1,65 @@
 # Data Sources Documentation
 
-This document describes the data sources used for the MSc Business Analytics dissertation:
+This document describes the data used for the MSc Business Analytics dissertation:
 
-“Evaluating the Impact of Explainable AI (XAI) on Decision-Making Effectiveness in Financial Services: A Cross-Industry Comparative Analysis”.
-
-Only publicly available datasets and simulated data are used to ensure ethical compliance and reproducibility.
+**“Evaluating the Impact of Explainable AI (XAI) on Decision-Making Effectiveness in Financial Services: A Cross-Industry Comparative Analysis.”**
 
 ---
 
-## Banking Sector
+## Overview of Data Usage
 
-**Dataset:** German Credit Dataset  
-**Source:** UCI Machine Learning Repository  
-**Link:** https://archive.ics.uci.edu/ml/datasets/statlog+(german+credit+data)
+This project uses **simulated financial data generated programmatically within the Jupyter Notebook**.  
+No external datasets are directly loaded, downloaded, or processed as part of the analytical workflow.
 
-**Purpose:**  
-Used to simulate credit risk and loan approval decision-making in the banking sector.
-
----
-
-## Insurance Sector (Proxy Dataset)
-
-**Dataset:** Bank Marketing Dataset  
-**Source:** UCI Machine Learning Repository  
-**Link:** https://archive.ics.uci.edu/ml/datasets/bank+marketing
-
-**Purpose:**  
-Used as a proxy dataset to simulate insurance-related decision-making, such as policy acceptance and risk classification.
+The use of simulated data ensures:
+- Full reproducibility of results
+- Ethical and legal compliance
+- Transparency in model development and evaluation
+- Alignment with academic research standards
 
 ---
 
-## Asset Management Sector
+## Simulated Financial Dataset
 
-**Dataset:** Financial market data  
-**Source:** Yahoo Finance  
-**Access Method:** Python `yfinance` library
+The simulated dataset is designed to reflect common variables used in financial decision-making contexts, including:
 
-**Purpose:**  
-Used to simulate asset management and portfolio risk decision-making scenarios.
+- Income
+- Loan amount
+- Credit score
+- Age
+- Binary financial risk outcome (target variable)
+
+These variables are generated using controlled random distributions to approximate realistic financial patterns while avoiding the use of real customer data.
+
+All data generation steps are fully documented and executable within the notebook:
+- `notebooks/xai-financial-analysis.ipynb`
 
 ---
 
-## Simulated Data
+## Purpose of Simulated Data
 
-Some datasets and outputs used in this project are simulated or derived for academic purposes to enable controlled comparison of explainable and non-explainable AI models.
+Simulated data is used to:
+- Evaluate the behaviour of a Random Forest classifier in a financial decision context
+- Examine how intrinsic explainability (feature importance) supports interpretation of model outputs
+- Enable controlled experimentation without confidentiality or access constraints
+
+This approach is commonly adopted in academic analytics research where access to real financial data is restricted.
 
 ---
 
 ## Ethical and Legal Compliance
 
-- All datasets are publicly available and anonymised  
-- No proprietary, sensitive, or Kaggle datasets are used  
-- Data is used strictly for educational and research purposes  
-- The project complies with GDPR and university ethical guidelines
+- No real personal, customer, or proprietary data are used
+- No Kaggle or restricted datasets are involved
+- All data is generated solely for academic purposes
+- The project complies with GDPR principles and university ethical guidelines
+- Results are intended for educational evaluation of explainable AI, not operational deployment
+
+---
+
+## Reproducibility
+
+Because the data is generated dynamically within the notebook, all analyses reported in the dissertation can be fully reproduced by executing the notebook from start to finish.
+
+This supports transparency, verification, and methodological rigour.
+ 
